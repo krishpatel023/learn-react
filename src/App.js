@@ -1,27 +1,14 @@
 import './App.css';
-import React, {Component } from 'react';
+import React from 'react';
+import Student from "./Student"
 
-class App extends Component{
-
-  constructor(){
-    super();
-    this.state={
-      data:0
-    }
-  }
-  updateData(){
-    this.setState({data:this.state.data+1})
-  }  
-  render(){
-    return(
+function App(){
+  return (
     <div className="App">
-        <h1>Learn React</h1>
-        <h2>Click Count</h2>
-        <h2>{this.state.data}</h2>
-        <button onClick={()=>this.updateData()}>Click Here</button>
-    </div>      
-    )
-  }
+      <h1>Learn React</h1>
+      <Student name={"Krish"} email="krishpatel0234@gmail.com" multipleProps={{address:"India" , mobile:"0000"}} />
+    </div>
+  );
 }
 
 export default App;
