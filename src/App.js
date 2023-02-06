@@ -8,6 +8,7 @@ function App(){
 
   function getFormData(e){
     console.log(name,movie,accepted)
+    //This is used so that default empty form cant be submitted.
     e.preventDefault()
   }
   return(
