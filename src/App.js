@@ -1,17 +1,21 @@
 import './App.css';
-import React, {Component} from 'react';
-import Student from "./Student"
+import React, {useState} from 'react';
 
-class App extends Component {
-  render(){
-    return (
-      <div className="App">
-        <h1>Learn React</h1>
-        <Student name={"Krish"} email="krishpatel0234@gmail.com" multipleProps={{address:"India" , mobile:"0000"}} />
-      </div>
-    );
+function App(){
+  const[status,setStatus]=useState(true)
+  function changeStatus(){
+    status?
+    setStatus(false)
+    :setStatus(true)
   }
+  
+  return(
+    <div className="App">
 
+      <button onClick={()=>changeStatus()}>Toggle</button>
+      {status? <h1>Learn React</h1> : null}
+    </div>
+  )
 }
 
 export default App;
