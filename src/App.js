@@ -1,22 +1,17 @@
 import './App.css';
-import React, { Component } from 'react';
+import React, {useState } from 'react';
+import Child from './Child'
 
-class App extends Component{
-  
-  constructor(){
-    super();
-    this.state={
-      data:"Krish"
-    }
-  }
-  render(){
+function App(){
+
+  const [name,setName] = useState("Krish");
     return(
       <div className='App'>
         <h1>Learn React</h1>
-        <h2>{this.state.data}</h2>
+        <Child name={name}/>
+        <button onClick={()=>setName("Patel")}>Click Here</button>
       </div>
     )
-  }
 }
 
 export default App;
