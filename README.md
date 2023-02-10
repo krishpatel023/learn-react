@@ -1,9 +1,7 @@
 NOTES:
 
-* It unmounts a component after exited to decrease memory and load on app.
+* With hooks we can use class component features in functional components such as state,life cycle, pure component, etc.
 
-* The componentWillUnmount method is called when the component is about to be removed from the DOM.
+* Any Hook starts with 'use'
 
-* It removes it completely from the DOM.
-
-* First Parent will run then the unmounting happens.
+* Example: useState, useCallback, useContect, useEffect, etc

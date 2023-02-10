@@ -1,27 +1,17 @@
 import './App.css';
-import React, {Component} from 'react';
-import Child from './Child'
+import React,{useState} from 'react';
 
-class App extends Component{
-  constructor(){
-      super();
-      console.log("constructor")
-      this.state={
-        show:false
-      }
-  }
+// Here useState is a hook.
 
-  render(){
-      console.log("render")
-      return(
-          <div className='App'>
-              <h1>Learn React</h1>
-              {console.log("Parent")}
-              {this.state.show ? <Child/> : <h1>Parent Component</h1>}
-              <button onClick={()=>{this.setState({show:!this.state.show})}}>TOGGLE</button>       
-          </div>
-      )
-  }
+function App(){
+  const[data,setData]=useState('Krish')
+  return(
+    <div className='App'>
+      <h1>Learn React</h1>
+      <h2>{data}</h2>
+      <button onClick={()=>setData("Patel")}>Click</button>
+    </div>
+  )
 }
 
 export default App;
