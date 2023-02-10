@@ -1,18 +1,22 @@
 import './App.css';
-import React from 'react';
-import Child from './Child';
+import React, { Component } from 'react';
 
-function App(){
-  //It is maily created for components that need to be used in many child components.
-  //So try to make it in parent component and reuse it.
-  function Data(){
-    alert("In Parent Component")
+class App extends Component{
+  
+  constructor(){
+    super();
+    this.state={
+      data:"Krish"
+    }
   }
-  return(
-    <div className="App">
-      <Child data={()=>Data()}/>
-    </div>
-  )
+  render(){
+    return(
+      <div className='App'>
+        <h1>Learn React</h1>
+        <h2>{this.state.data}</h2>
+      </div>
+    )
+  }
 }
 
 export default App;
