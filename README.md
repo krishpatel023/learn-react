@@ -1,9 +1,16 @@
 NOTES:
-* **No effect of state & props.
-* **It runs after the page is loaded.
-* **After HTML is loaded it runs.So any operation that is dependent on HTML is done through this.
-* Maily used when we need to call the APIs.
-    **It dosen't reloads when state or props are changed thus once APIs are called it won't relod. We need that functionality as we dont want everytime there is change in state/props APIs are recalled.
-* **Any opereations that we need to run
 
-See the order of loading --> COnstructor -> RENDER -> CONSTRUCTOR_DID_MOUNT
+* Only works after any state/props updates.
+* If we have 4 states it will run on any of the updation of the state.
+* Always use CONDITION while using this or it will run INFINITELY.
+* It will not run on page load.
+
+## ARGUMENTS 
+* preState --> It will print previous state. See in console. It will always show preState. 
+
+* preProps --> It will print previous props. See in console. It will always show preProps.
+
+* snapshot --> It will always be undefined here. If your component implements getSnapshotBeforeUpdate() lifecycle than only its value will be seen.
+
+
+## The main use of it is if we want compare current state and previous state.
