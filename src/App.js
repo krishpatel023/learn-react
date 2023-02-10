@@ -1,26 +1,24 @@
 import './App.css';
 import React, {Component} from 'react';
+import Child from './Child'
 
 class App extends Component{
   constructor(){
       super();
       console.log("constructor")
       this.state={
-        count:0
+        show:false
       }
   }
-  shouldComponentUpdate(){
-    console.log("shouldComponentUpdate")
-    //Need to write true by default if false it won't update the state
-    return true;
-  }
+
   render(){
       console.log("render")
       return(
           <div className='App'>
               <h1>Learn React</h1>
-              <h2>{this.state.count}</h2>
-              <button onClick={()=>{this.setState({count:this.state.count+1})}}>INCREASE COUNT</button>       
+              {console.log("Parent")}
+              {this.state.show ? <Child/> : <h1>Parent Component</h1>}
+              <button onClick={()=>{this.setState({show:!this.state.show})}}>TOGGLE</button>       
           </div>
       )
   }

@@ -1,7 +1,9 @@
 NOTES:
 
-* It can stop rendering.
-* Will only run when state and props are updated.
-* We can put a condition and if the condition is true than we can run some code like pausing render function.
-* Stoping some rendering results in improving speed of app.
+* It unmounts a component after exited to decrease memory and load on app.
 
+* The componentWillUnmount method is called when the component is about to be removed from the DOM.
+
+* It removes it completely from the DOM.
+
+* First Parent will run then the unmounting happens.
