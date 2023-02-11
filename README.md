@@ -1,8 +1,4 @@
 NOTES:
 
-Official Documentation:
-https://react-bootstrap.github.io/getting-started/introduction
-
-For Installation:
-npm install react-bootstrap bootstrap
-
+## Why do we prefer Map over ForLoop?
+The reason is that map works in return statement as well but for loop dosen't work in return statement.
