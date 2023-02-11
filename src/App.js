@@ -1,37 +1,15 @@
 import './App.css';
-import React,{useState, useEffect} from 'react';
-import Child from './Child'
-
-
-// Here useState is a hook.
+//Adding the css file
+import './style.css'
+import style from './custom.module.css'
 
 function App(){
-  const[data,setData]=useState(10)
-  const[count,setCount]=useState(0)  
   
-  //Normal UseEffect without parameter/condition
-  //This will run for every state
-  useEffect(()=>{
-    console.log("useEffect")
-  }
-  )
-  //useEffect with condition
-  //Here onclicking data this will not run.
-  //This only runs for count state
-  useEffect(()=>{
-    console.log("useEffect---Count")
-  },[count]
-  )
-
   return(
     <div className='App'>
-      <h1>Learn React</h1>
-      <h2>Count : {count}</h2>
-      <h2>Data : {data}</h2>
-      <Child count={count} data={data} />
-      <button onClick={()=>setCount(count + 1)}>Count</button>
-      <br />
-      <button onClick={()=>setData(data + 1)}>Data</button>
+      <h1 className='type1'>Type 1</h1>
+      <h1 style={{  backgroundColor: 'black', color: 'blue'}}>Type 2</h1>
+      <h1 className={style.success}>Type 3</h1>
     </div>
   )
 }
