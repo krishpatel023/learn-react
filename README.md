@@ -1,5 +1,6 @@
 NOTES:
 
-* It is used in class component only.
-* It stops re rendering of a component.
-* Pure component checks if the change is made or not if it's same it won't re-render. But if it's different then will render.
+## useMemo Hook
+* useMemo enhances performance.
+* It does same thing as pureComponent does for the calss component, but for the functional component.
+* It only updates when the state in given conditon is updated. And not when any other states are updated.
