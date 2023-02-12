@@ -1,28 +1,33 @@
-import { useRef } from 'react';
+import { useState } from 'react';
 import './App.css';
 
 function App(){
-  let inputRef1 = useRef(null)
-  function handleSubmit(e){
-    e.preventDefault()
-    console.log(inputRef1.current.value)
-    //Both ways are true as main purpose is that input should not be handled by state.
-    let input2 = document.getElementById('input2').value
-    console.log(input2)
-  }
+
   return(
     <div className='App'>
       <h1>Learn React</h1>
-      <form onSubmit={(e)=>handleSubmit(e)}>
-      <input type="text" ref={inputRef1}/>
-      <br />
-
-      <input id="input2" type="text"/>
-      <br />
-      <button>Submit</button>
-      </form>
+      <HOCRed cmp={Counter}/>
+      <HOCGreen cmp={Counter}/>
+      <HOCBlue cmp={Counter}/>
     </div>
   )
 }
-
+function HOCRed(props){
+  return <h2 style={{backgroundColor:"red",width:"150px"}}><props.cmp/></h2>
+}
+function HOCGreen(props){
+  return <h2 style={{backgroundColor:"green",width:"150px"}}><props.cmp/></h2>
+}
+function HOCBlue(props){
+  return <h2 style={{backgroundColor:"blue",width:"150px"}}><props.cmp/></h2>
+}
+function Counter(){
+  const [count,setCount] = useState(0)
+  return(
+    <div>
+      <h3>Count:{count}</h3>
+      <button onClick={()=>setCount(count+1)}>Update</button>
+    </div>
+  )
+}
 export default App;
