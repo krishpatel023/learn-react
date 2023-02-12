@@ -1,19 +1,19 @@
-import { useRef } from 'react';
+import { useState } from 'react';
 import './App.css';
-import Child from './Child'
 
 function App(){
-  let inputRef = useRef(null)
-  function handleRef(){
-    console.log(inputRef.current.value="1000")
-  }
+  const[val,setVal]=useState("")
+  const[item,setItem]=useState("")
   return(
     <div className='App'>
       <h1>Learn React</h1>
-      <Child ref={inputRef}/>
+      <h2>Value : {val}</h2>
+      <input type="text" onChange={(event)=>setVal(event.target.value)} placeholder="Value"/>
       <br />
-      <button onClick={handleRef}>Click</button>
-      
+      <br />
+      <h2>Item: {item}</h2>
+      <input type="text" onChange={(event)=>setItem(event.target.value)} placeholder="Item"/>
+
     </div>
   )
 }

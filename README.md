@@ -1,4 +1,5 @@
 NOTES:
 
-## forwardRef
-* It is used to change DOM of child component
+## Controlled Component
+* When input fields are controlled with states then it is called as controlled component.
+* Uncontrolled component directly handled using DOM.
