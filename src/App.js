@@ -1,36 +1,24 @@
-import { useState, useMemo } from 'react';
+import { Component, createRef } from 'react';
 import './App.css';
 
-function App(){
-  const[count,setCount]=useState(0)
-  const[flag,setFlag]=useState(10)
-
-  //With use memo the function will only run if count is updated.
-  //As we can see in console that the function without useMemo runs even if we update flag.
-  //The one with useMemo runs only if we update count.
-  const multiCountMemo = useMemo(
-    function multiCountIn(){
-      console.log("With useMemo")
-      return count*3;
-    },[count]
-  )
-  function multiCount(){
-    console.log("Without useMemo")
-    return count*2;
+class App extends Component{
+  constructor(){
+    super();
+    this.inputRef = createRef();
   }
-  return(
-    <div className='App'>
-      <h1>Learn React</h1>
-      <h3>Count: {count}</h3>
-      <button onClick={()=>setCount(count+1)}>Count</button>
-      <br />
-      <h3>Flag: {flag}</h3>
-      <button onClick={()=>setFlag(flag*10)}>Flag</button>
-      <br />
-      <h2>{multiCount()}</h2>
-      <h2>{multiCountMemo}</h2>
-    </div>
-  )
+  componentDidMount(){
+    console.log(this.inputRef)
+    //From here we manipulated DOM and the value will be 1000
+    console.log(this.inputRef.current.value="1000")
+  }
+  render(){
+    return(
+      <div className='App'>
+        <h1>Learn React</h1>
+        <input type="text" ref={this.inputRef} />
+      </div>
+    )
+  }
 }
 
 export default App;
