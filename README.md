@@ -1,4 +1,4 @@
 NOTES:
 
-## useRef
-* same as Ref.
+## forwardRef
+* It is used to change DOM of child component

@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import './App.css';
+import Child from './Child'
 
 function App(){
   let inputRef = useRef(null)
@@ -9,9 +10,10 @@ function App(){
   return(
     <div className='App'>
       <h1>Learn React</h1>
-      <input type="text" ref={inputRef} />
+      <Child ref={inputRef}/>
       <br />
-      <button onClick={()=>handleRef()}>Click</button>
+      <button onClick={handleRef}>Click</button>
+      
     </div>
   )
 }
