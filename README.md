@@ -1,4 +1,3 @@
 NOTES:
 
-## Higher Order Component (HOC)
-* A component that takes component as input and give component as an output
+## Add /home and about at end to access home page and about page
