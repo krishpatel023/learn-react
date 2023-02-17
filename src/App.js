@@ -23,6 +23,7 @@ function App(){
         /* 
         This takes us to the 404 page. It does not redirect us.
 
+        /* means any url name that does not match the above
         <Route path="/*" element={<Page404/>} /> */
         }
         {/* This redirects any wrong URL to the home page only. */}
