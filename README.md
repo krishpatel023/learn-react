@@ -1,14 +1,15 @@
 NOTES:
 
-## useLocation
+## ProtectedRoutes
 
-About.js --> User.js
+* App.js some protected routes are added.
+* Now in protected routes we cheched that is the value of login is true or false in the key(login) of local storage.
+* Then in login onClick we changed the value of the key and then we can access the pages.
 
-state is used in About.js to send the data and recieved in the User.js using useLocation.
+--> If we try to access the protected pages if the value is false then we can not access the pages(about & filter) but after login we can.
 
-It has various components.
-* hash --> It does the same job as the =
-* key  --> It contains an unique key that helps us to find from which route we came from.
-* pathname --> It contains the path name from the URL.
-* search --> params that we searched.
-* state --> Contains data transfered from previous page.
+# Before Login
+[!Screenshot](./ScreenShots/before.png);
+
+# After Login
+[!Screenshot](./ScreenShots/after.png);

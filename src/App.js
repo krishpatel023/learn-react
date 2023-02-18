@@ -11,6 +11,9 @@ import Contact from './components/Contact';
 import Channel from './components/Channel';
 import Company from './components/Company';
 import Other from './components/Other';
+/* For Protected Routes */
+import Login from './components/Login'
+import ProtectedRoutes from './components/ProtectedRoutes';
 
 function App(){
 
@@ -19,10 +22,15 @@ function App(){
       <BrowserRouter>
         <NavBar />
         <Routes>
+
+          {/* For Protected Routes */}
+          <Route path='/login' element={<Login />} />
+
           <Route path="/" element={<h1>App.JS</h1>} />
           <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path='/filter' element={<Filter/>} />
+          {/* About and filter are protected routes */}
+          <Route path="/about" element={<ProtectedRoutes Component={About} />} />
+          <Route path='/filter' element={<ProtectedRoutes Component={Filter} />} />
 
           {/* Nested Routing */}
           <Route path='/contact/' element={<Contact/>} >
@@ -30,8 +38,7 @@ function App(){
             <Route path='company' element={<Company/>} />          
             <Route path='other' element={<Other/>} />
           </Route>
-
-          
+         
 
           <Route path="/user/:name" element={<User />} />
           <Route path="/*" element={<Navigate to="/home" />} />
