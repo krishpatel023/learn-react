@@ -1,9 +1,6 @@
 NOTES:
 
-## useNavigate
+## Nested Routing.
 
-Navigation using button can be achieved by 2 ways:-
-* useNavigate
-* navigate using function
-
-Examples of both are shown in the Home.js component.
+* Nested Routes are added in the App.js.
+* Then in Contact.js the links to the components are added. 

@@ -7,6 +7,10 @@ import User from './components/User';
 import Filter from './components/Filter';
 
 import './App.css';
+import Contact from './components/Contact';
+import Channel from './components/Channel';
+import Company from './components/Company';
+import Other from './components/Other';
 
 function App(){
 
@@ -19,6 +23,16 @@ function App(){
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path='/filter' element={<Filter/>} />
+
+          {/* Nested Routing */}
+          <Route path='/contact/' element={<Contact/>} >
+            <Route path='channel' element={<Channel/>} />
+            <Route path='company' element={<Company/>} />          
+            <Route path='other' element={<Other/>} />
+          </Route>
+
+          
+
           <Route path="/user/:name" element={<User />} />
           <Route path="/*" element={<Navigate to="/home" />} />
         </Routes>
