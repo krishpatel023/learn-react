@@ -9,7 +9,7 @@ NOTES:
 --> If we try to access the protected pages if the value is false then we can not access the pages(about & filter) but after login we can.
 
 # Before Login
-[!Screenshot](./ScreenShots/before.png);
+![Screenshot](./ScreenShots/before.png);
 
 # After Login
-[!Screenshot](./ScreenShots/after.png);
+![Screenshot](./ScreenShots/after.png);
