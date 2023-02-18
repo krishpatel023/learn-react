@@ -1,4 +1,8 @@
 NOTES:
 
-## NavLink
- We can't apply class to link so we use NavLink.
+## Active Link
+React has active class attached to it by itself to the open link. As seen in below image.
+
+So The active effect wanted can be applied in the css itself.
+
+![Screenshot](./ScreenShots/active.png)

@@ -15,3 +15,7 @@
 .nav-bar-link:hover{
     color:aquamarine;
 }
+/* React has active class attached to it by itself to the open link. */
+.active{
+    color:blue;
+}
