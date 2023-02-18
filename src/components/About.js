@@ -5,9 +5,10 @@ function About(){
 
     return<>
         <h1>About Page</h1>
-        <Link to='/user/krish'>Krish</Link>
+        {/* It is sending data through the state so that useLocation can recieve it. */}
+        <Link to='/user/krish' state={{name:'Krish',age:20,gender:"Male"}}>Krish</Link>
         <br />
-        <Link to='/user/kashvi'>Kashvi</Link>
+        <Link to='/user/kashvi' state={{name:'Kashvi',age:20,gender:"Female"}}>Kashvi</Link>
         <br />
         <br />
         <br />
