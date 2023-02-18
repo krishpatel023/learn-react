@@ -1,0 +1,17 @@
+.header{
+    margin-top: -10px;
+    background-color: black;
+    width:100vw;
+}
+.navbar li{
+    display: inline-block;
+    padding: 15px 10px;
+}
+.nav-bar-link{
+    color:darkgreen;
+    font-weight: bold;
+    text-decoration: none;
+}
+.nav-bar-link:hover{
+    color:aquamarine;
+}
