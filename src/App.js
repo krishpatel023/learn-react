@@ -1,51 +1,10 @@
-import { BrowserRouter, Routes, Route , Navigate} from 'react-router-dom';
-import React from 'react';
-import Home from './components/Home';
-import About from './components/About';
-import NavBar from './components/NavBar';
-import User from './components/User';
-import Filter from './components/Filter';
-
 import './App.css';
-import Contact from './components/Contact';
-import Channel from './components/Channel';
-import Company from './components/Company';
-import Other from './components/Other';
-/* For Protected Routes */
-import Login from './components/Login'
-import ProtectedRoutes from './components/ProtectedRoutes';
-
-function App(){
-
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-
-          {/* For Protected Routes */}
-          <Route path='/login' element={<Login />} />
-
-          <Route path="/" element={<h1>App.JS</h1>} />
-          <Route path="/home" element={<Home />} />
-          {/* About and filter are protected routes */}
-          <Route path="/about" element={<ProtectedRoutes Component={About} />} />
-          <Route path='/filter' element={<ProtectedRoutes Component={Filter} />} />
-
-          {/* Nested Routing */}
-          <Route path='/contact/' element={<Contact/>} >
-            <Route path='channel' element={<Channel/>} />
-            <Route path='company' element={<Company/>} />          
-            <Route path='other' element={<Other/>} />
-          </Route>
-         
-
-          <Route path="/user/:name" element={<User />} />
-          <Route path="/*" element={<Navigate to="/home" />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
+import React from 'react'
+function App() {
+ return(
+  <div>
+    <h1>Learn Redux</h1>
+  </div>
+ );
 }
-
 export default App;

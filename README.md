@@ -1,15 +1,18 @@
 NOTES:
 
-## ProtectedRoutes
+## Redux
 
-* App.js some protected routes are added.
-* Now in protected routes we cheched that is the value of login is true or false in the key(login) of local storage.
-* Then in login onClick we changed the value of the key and then we can access the pages.
+* React is a state management tool.
+* It dosen't belong to the component state.
+* It stores the data not as database but for session only. When its refreashed the data vanishes.
+* One application will have only one store.
 
---> If we try to access the protected pages if the value is false then we can not access the pages(about & filter) but after login we can.
+## Redux Architecture
+![Screenshot](./ScreenShots/architecture.png)
 
-# Before Login
-[!Screenshot](./ScreenShots/before.png);
+## File and Folder Structure
 
-# After Login
-[!Screenshot](./ScreenShots/after.png);
+1. Components --> Header,Footer,Sidebar,etc.
+2. Container  --> Connect the Components to Redux.
+3. Service    --> We will keep all the Redux here.
+              --> { Actions, Reducers & Constants }
